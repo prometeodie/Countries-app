@@ -1,0 +1,23 @@
+
+
+.active-yellow{
+    background-color: #feca57;
+}
+
+.active-green{
+    background-color: #1dd1a1;
+}
+
+.small-flag{
+    width: 50px;
+}
+
+
+.normal-flag{
+    width: 120px;
+}
+
+.mr-5{
+    margin-right: 5px;
+}
+

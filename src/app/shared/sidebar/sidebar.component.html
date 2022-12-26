@@ -1,0 +1,39 @@
+
+
+        <h2>Busqueda</h2>
+        <hr>
+        <ul class="list-group">
+            <li 
+            routerLink=""
+            routerLinkActive="active"
+            [routerLinkActiveOptions] = "{ exact:true }"
+            class="list-group-item">
+            Buscar país
+            </li>
+    
+            <li 
+            routerLink="region"
+            routerLinkActive="active-yellow"
+            class="list-group-item">
+            Por region
+            </li>
+    
+            <li 
+            routerLink="capital"
+            routerLinkActive="active-green"
+            class="list-group-item">
+            Por capital
+            </li>    
+        </ul>
+        <!-- routerLink sirve para cuando clickea vaya a 
+        esa ruta, se le debe poner la palabra reservada que le pusimos en al routingModule -->
+    
+        <!-- routerLinkActive sirve para ponerle la calse que nosotros queramos cuando se activa esa ruta -->
+    
+        <!-- [routerLinkActiveOptions] = "{ exact:true }" en este caso 
+        se utiliza para que la clase se ponga cuando la ruta seleccionada sea 100% exacta 
+        a como la definimos en el routModule, se usa en este caso por que a esa ruta se la puso vacia, 
+        si tuviera algun string no haria falta usarlo -->
+        
+
+

@@ -1,0 +1,40 @@
+<div  class="animate__animated animate__fadeIn animate__faster ">
+
+    <h3>Buscarpor region <small>{{regionActiva | titlecase}}</small></h3>
+    <hr>
+    
+    
+    <h5>seleccione la region</h5>
+    
+    <div class="row">
+        <div class="col">
+            <button *ngFor="let region of regiones"
+            [class]= "getClassCss(region)"
+            (click)="activarRegion( region )"> 
+                {{region | titlecase}}
+            </button>
+            <!-- [class]="METODO"  en este formato puedo poner un metodo o directamente
+            el operador ternario, es mas limpio poner el metodo y usar el operador ternario en el ".ts" 
+            y retornar el resultado o el operador ternario -->
+            <!-- ---------------------------------o---------------------------------- -->
+            <!-- [class.btn-primary]="region === regionActiva" aplica dica clase si la condicion es true -->
+            <!-- ---------------------------------o---------------------------------- -->
+            <!-- [ngClass]="{'class': true,
+                        'class': true,
+                        'class': true }" se puede poner varias clases y condiciones,
+                        cuando dicha condicion se cumple aplica la clase 
+                    EJ Para este caso [ngClass]="
+                                        'btn-primary:region === regionActiva',
+                                        'btn-outline-primary: region !== regionActiva'"-->
+                        
+        </div>
+    
+        
+    </div>
+</div>
+
+<div class="row" *ngIf="showTable">
+    <div class="col">
+      <app-pais-tabla [dataPaises]="paises" ></app-pais-tabla>
+    </div>
+</div>
